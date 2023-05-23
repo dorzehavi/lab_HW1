@@ -6,7 +6,7 @@ import math
 def load_data_to_dict(path: str):
     patient_data = {}
     for filepath in glob.glob(path + '*.psv'):
-        patient_num = int(filepath.split('_')[1].split('.')[0])
+        patient_num = int(filepath.split('/')[-1].split('_')[1].split('.')[0])
 
         df = pd.read_csv(filepath, sep='|')
 

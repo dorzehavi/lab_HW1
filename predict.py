@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
     # Store predictions in a CSV file
     predictions = zip(X_id, y_pred)
-    output_file = 'predictions.csv'
+    output_file = 'prediction.csv'
     with open(output_file, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['id', 'prediction'])
